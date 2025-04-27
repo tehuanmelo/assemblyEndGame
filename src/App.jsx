@@ -16,6 +16,9 @@ const App = () => {
   let isGameOver = wrongGuessCount === languages.length - 1
   let isGameWon = currentWord.split("").every(letter => guessedLetters.includes(letter))
   let endGame = isGameOver || isGameWon
+  const lastGuessedLetter = guessedLetters[guessedLetters.length - 1]
+  const isLastGuessWrong = lastGuessedLetter && !currentWord.includes(lastGuessedLetter)
+
 
   function guess(key) {
     setGuessedLetters(prev => guessedLetters.includes(key) ? prev : [...prev, key])
@@ -40,8 +43,10 @@ const App = () => {
       >
         {
         endGame ?
-          isGameOver ? <><h2>You Lose</h2><p>Better start learning Assembly 😭</p></> : <><h2>You Win</h2><p>Well Done 🎉</p></> :
-          <>{wrongGuessCount ? <><h2>Farewell 👋🏻</h2><p>{fareWellMessage(languages[wrongGuessCount - 1].name)} 😫</p></> : <><h2>PlaceHolder</h2><p>placeholder</p></>}</>
+          isGameOver ? <><h2>You Lose</h2><p>Better start learning Assembly 😭</p></> : 
+                          <><h2>You Win</h2><p>Well Done 🎉</p></> :
+                      <>{isLastGuessWrong ? <><h2>Farewell 👋🏻</h2><p>{fareWellMessage(languages[wrongGuessCount - 1].name)} 😫</p></> : 
+                          <><h2>Good Job ✌️</h2><p>You doing great let's keep the coding safe 😃</p></>}</>
         }
       </section>
 
