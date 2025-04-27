@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import {languages} from './languages'
 import { clsx } from 'clsx'
 import { fareWellMessage, getRandomWord } from '../utils'
+import ReactConfetti from 'react-confetti'
 
 const App = () => {
 
@@ -34,13 +35,15 @@ const App = () => {
   return (
     <main>
 
+
+      {isGameWon && <ReactConfetti />}
       <header>
         <h1>Assembly EndGame</h1>
         <p>Guess the word withim 8 attempts to keep the programming world safe from assembly</p>
       </header>
 
-      <section className={`game-status ${endGame ? isGameOver ? "game-over" : "game-won" : ""}`} style={{visibility: endGame ? "visible" : wrongGuessCount ? "visible" : "hidden"}}
-      >
+      <section className={`game-status ${endGame ? isGameOver ? "game-over" : "game-won" : ""}`} style={{visibility: endGame ? "visible" : wrongGuessCount ? "visible" : "hidden"}}>
+        
         {
         endGame ?
           isGameOver ? <><h2>You Lose</h2><p>Better start learning Assembly 😭</p></> : 

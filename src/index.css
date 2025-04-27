@@ -37,6 +37,7 @@ header >  p {
 }
 
 section.game-status {
+  position: relative;
   background-color: #8003e5;
   margin: 30px auto;
   /* padding: 10px 20px; */
