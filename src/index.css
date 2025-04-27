@@ -98,6 +98,7 @@ section.game-status {
   justify-content: center;
   align-items: center;
   background-color: #fcba29;
+  color: black;
   font-family: inherit;
   border-radius: 5px;
   text-transform: uppercase;
