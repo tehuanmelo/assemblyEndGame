@@ -15,9 +15,9 @@ body {
   color: #d9d9d9;
   height: 100vh;
   max-width: 450px;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   text-align: center;
   padding: 40px 30px;
   margin: 0 auto;
