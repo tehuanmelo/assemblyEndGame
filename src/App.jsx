@@ -89,7 +89,7 @@ const App = () => {
             <button 
               key={id} 
               className={`key ${classString}`}
-              disabled={isGuessed}
+              disabled={endGame ? true : isGuessed}
               onClick={() => guess(key)}
             >
             {key}
