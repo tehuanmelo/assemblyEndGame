@@ -28,21 +28,20 @@ export function fareWellMessage(language) {
 
   export function getRandomWord() {
     const option = [
-        "algorithm", "array", "API", "application", "argument", "backend", "binary",
+        "algorithm", "array", "api", "application", "argument", "backend", "binary",
         "bug", "build", "branch", "boolean", "class", "code", "compile", "command",
         "constant", "condition", "constructor", "closure", "client", "callback",
-        "database", "debug", "deploy", "dependency", "development", "DNS", "DOM",
+        "database", "debug", "deploy", "dependency", "development", "dns", "dom",
         "dynamic", "encryption", "element", "endpoint", "event", "exception", "expression",
-        "framework", "frontend", "function", "for-loop", "fullstack", "git", "graph",
-        "hash", "HTML", "HTTP", "HTTPS", "inheritance", "instance", "interface",
-        "iteration", "JavaScript", "JSON", "key", "library", "logic", "loop",
+        "framework", "frontend", "function", "fullstack", "git", "graph",
+        "hash", "html", "http", "https", "inheritance", "instance", "interface",
+        "iteration", "javascript", "json", "key", "library", "logic", "loop",
         "memory", "method", "middleware", "module", "mutation", "node", "null",
         "object", "operator", "optimization", "package", "parameter", "parsing",
         "patch", "pointer", "program", "property", "protocol", "queue", "recursion",
         "refactor", "repository", "return", "runtime", "script", "server", "session",
         "stack", "statement", "string", "syntax", "thread", "token", "type",
-        "variable", "version", "virtual", "value", "while-loop", "webpack", "wrapper",
-        "XML"
+        "variable", "version", "virtual", "value", "webpack", "wrapper"
         ]
     const randomIndex = Math.floor(Math.random() * option.length)
     return option[randomIndex]
